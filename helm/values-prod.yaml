@@ -1,1 +1,18 @@
-project/helm/values-staging.yaml
+namespace:
+  name: prod
+
+image:
+  pullPolicy: Always
+
+service:
+  port: 7111
+
+replicaCount: 5
+
+resources:
+  requests: 
+    memory: 128Mi
+    cpu: 350m
+  limits: 
+    memory: 256Mi
+    cpu: 500m
