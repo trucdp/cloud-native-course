@@ -22,8 +22,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: "{{defaultContext}}:techtrends"
-          file: ./project/techtrends/Dockerfile
+          context: .
+          file: ./Dockerfile
           push: true         
           tags: trucdp/techtrends:latest
           username: ${{ secrets.DOCKER_USERNAME }}
