@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: techtrends-prod
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: helm
+    helm:
+      valueFiles:
+      - values-staging.yaml
+    repoURL: https://github.com/trucdp/cloud-native-course
+    targetRevision: HEAD
+  syncPolicy: {}
