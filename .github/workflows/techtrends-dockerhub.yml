@@ -22,7 +22,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./projects/techtrends
           file: ./Dockerfile
           push: true
           tags: trucdp/techtrends:latest
