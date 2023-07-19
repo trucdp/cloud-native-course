@@ -1,11 +1,18 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+docker build -t techtrends:latest .
 
 ## Docker commands used to run the application
 # TODO: insert the docker run command
-
+docker run -p 3111:3111 techtrends:latest --name techtrends_deploy
 ## Docker commands used to get the application logs
 # TODO: insert the docker logs command
-
+docker logs --follow techtrends_deploy
 ## Logs from the container running the TechTrends application
 # TODO: paste logs from the Docker container 
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:172.17.0.1 - - [19/Jul/2023 10:07:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [19/Jul/2023 10:07:05] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [19/Jul/2023 10:07:05] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [19/Jul/2023 10:07:43] "GET /metrics HTTP/1.1" 200 -
